@@ -1,15 +1,15 @@
 function sortArray() {
-    let versions = ['2.11', '2.2', '2.2.12', '2.2.110', '1.0'];
+    var versions = ['2.11', '2.2', '2.2.12', '2.2.110', '1.0'];
 
     for (var travel = 0; travel < versions.length ; travel++) {
 
-        for(var j = 0; j < versions.length - 1; j++){
+        for(var leftElement = 0; leftElement < versions.length - 1; leftElement++){
 
-            if (versions[j] > versions[j + 1]) {
+            if (versions[leftElement] > versions[leftElement + 1]) {
 
-                var change = versions[j];
-                versions[j] = versions[j+1];
-                versions[j + 1] = change;
+                var change = versions[leftElement];
+                versions[leftElement] = versions[leftElement + 1];
+                versions[leftElement + 1] = change;
 
             }
         }
